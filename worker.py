@@ -114,7 +114,7 @@ def fetch_villages(year):
 
         for index,village in enumerate(villages):
             #元组(code,name,parent)
-            villages[index] = (village[0].split("/").pop(),village[1],village[0])
+            villages[index] = (village[0].split("/").pop(),village[1],town[0])
         sqlite_data.save_villages(villages)
         all_villages = all_villages + villages
     return all_villages
